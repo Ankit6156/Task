@@ -1,0 +1,31 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Drag & Drop Website Builder</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="sidebar">
+    <h2>@Elements</h2>
+    <div class="element" draggable="true" data-type="text">Text</div>
+    <div class="element" draggable="true" data-type="image">Image</div>
+    <div class="element" draggable="true" data-type="button">Button</div>
+  </div>
+
+  <div class="canvas" id="canvas" ondragover="event.preventDefault();" ondrop="drop(event)">
+   <div class="text" id="head"><p><b></b>Hello Everyone this is my Simple Drop Drag Website</b></p></div> 
+    <p class="placeholder">Please Drag Elements Here</p>
+  </div>
+
+  <div class="properties" id="propertiesPanel" style="display:none;">
+    <h2>Edit Profile</h2>
+    <div id="propertyFields"></div>
+    <button onclick="deleteElement()">Delete Element</button>
+  </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
